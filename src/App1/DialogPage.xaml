@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App1.DialogPage">
+    <StackLayout BackgroundColor="AliceBlue" Spacing="0" Margin="0,35,0,0" VerticalOptions="Fill" x:Name="layout" Padding="0,0,0,0">
+        <ScrollView BackgroundColor="Gray" x:Name="contentScrollView" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" >
+            <StackLayout BackgroundColor="White" Margin="0,.5,0,0.5" x:Name="contentStack" ChildAdded="contentStack_ChildAdded" Orientation="Vertical" VerticalOptions="Fill" HorizontalOptions="FillAndExpand" />
+        </ScrollView>
+        <StackLayout Orientation="Vertical">
+            <ScrollView BackgroundColor="Gray" x:Name="diageScrollView" Orientation="Vertical" HeightRequest="0" IsVisible="True">
+                <Label x:Name="DiagnosticText" Margin="0,0,0,5" BackgroundColor="White" FontSize="Small" TextColor="Black" Text=""  />
+            </ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" Padding="5" Margin="0,0,0,0" Orientation="Horizontal">
+                <Button x:Name="FromButton" FontSize="17" FontAttributes="Bold" Text="English" HorizontalOptions="FillAndExpand" BorderColor="Black" TextColor="White"
+                    WidthRequest="120" BackgroundColor="Gray" BorderWidth="2" Pressed="OnFromButtonPressed" Released="OnFromButtonReleased" />
+                <Button x:Name="ToButton"  FontSize="17"  FontAttributes="Bold" Text="Spanish" HorizontalOptions="FillAndExpand" WidthRequest="120" BorderColor="Black" Margin="10, 0, 0, 0"
+                    TextColor="White" BackgroundColor="Gray" BorderWidth="2" Pressed="OnToButtonPressed" Released="OnToButtonReleased" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

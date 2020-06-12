@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interpreter\**" />
+    <Compile Remove="LanguageDetectionDto\**" />
+    <EmbeddedResource Remove="Interpreter\**" />
+    <EmbeddedResource Remove="LanguageDetectionDto\**" />
+    <None Remove="Interpreter\**" />
+    <None Remove="LanguageDetectionDto\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AudioEventArgs.cs" />
+    <Compile Remove="Configuration.cs" />
+    <Compile Remove="DataFolder.cs" />
+    <Compile Remove="FolderPicker.cs" />
+    <Compile Remove="Interfaces\IAutoInterpreter.cs" />
+    <Compile Remove="Interfaces\IConfiguration.cs" />
+    <Compile Remove="Interfaces\IDataFolderPicker.cs" />
+    <Compile Remove="Interfaces\IDualInputInterpreter.cs" />
+    <Compile Remove="Interfaces\IInterpreter.cs" />
+    <Compile Remove="Interfaces\IManualInterpreter.cs" />
+    <Compile Remove="Interfaces\IMic.cs" />
+    <Compile Remove="Interfaces\IPushToTalkInterpreter.cs" />
+    <Compile Remove="Interfaces\ISpeechToSpeechService.cs" />
+    <Compile Remove="LanguageDetectionService.cs" />
+    <Compile Remove="NotificationEventArgs.cs" />
+    <Compile Remove="RecognizerState.cs" />
+    <Compile Remove="Services\CustomModel.cs" />
+    <Compile Remove="SpeechToSpeechService.cs" />
+    <Compile Remove="StaticPropertyContractResolver.cs" />
+    <Compile Remove="TranslationEventArgs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.2" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.2" />
+    <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.8.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DialogPage.xaml.cs">
+      <DependentUpon>DialogPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="App1.CannedContentPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker Margin="5,40, 0, 0" x:Name="FormsPicker" Title="Forms" HorizontalOptions="Start" SelectedIndexChanged="FormsPicker_SelectedIndexChanged" />
+            <ScrollView Orientation="Both" IsVisible="True" HorizontalOptions="StartAndExpand">
+                <ListView x:Name="listView" ItemTapped="OnItemTapped" HorizontalOptions="StartAndExpand" ItemsSource="{Binding .}" />
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

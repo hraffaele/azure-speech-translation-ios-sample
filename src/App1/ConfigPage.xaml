@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.ConfigPage">
+    <ContentPage.Content>
+        <ScrollView x:Name="diageScrollView" Orientation="Vertical" HeightRequest="100" IsVisible="True">
+        <StackLayout>
+            <TableView Intent="Settings " VerticalOptions="FillAndExpand" >
+                    <TableRoot>
+                        <TableSection Title="Language Selection">
+
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Picker x:Name="ConfigLanguageCode1" Title="Primary Language" HorizontalOptions="StartAndExpand">
+                                    </Picker>
+
+                                    <Picker x:Name="ConfigLanguageCode2" Title="Secondary Language" HorizontalOptions="StartAndExpand">
+                                    </Picker>
+                                </StackLayout>
+                            </ViewCell>
+                        </TableSection>
+                        <TableSection Title="Translation Settings">
+                            <SwitchCell Text="Signal When Complete" />
+                            <SwitchCell Text="Use Custom Model" On="true" />
+                        </TableSection>
+
+                        <!--<TableSection Title="Speech Service Configuration">
+                            <EntryCell x:Name="ConfigRegion" Label="Region" />
+                            <EntryCell x:Name="ConfigSubscriptionKey" Label="Subscription Key" />
+                            <EntryCell x:Name="ConfigApplicationInsightsKey" Label="Application Insights Key" />
+                            <EntryCell x:Name="ConfigCustomSpeechEndpointId" Label="Custom Speech Endpoint Id" />
+                        </TableSection>
+                        <TableSection Title="Text to Text Configuration">
+                            <EntryCell x:Name="ConfigTextToTextSubscriptionKey" Label="Subscription Key"/>
+                            <EntryCell x:Name="ConfigTextToTextHost" Label="Host" />
+                            <EntryCell x:Name="ConfigTextToTextRoute" Label="Route" />
+                        </TableSection>
+                        <TableSection Title="Text Analytics">
+                            <EntryCell x:Name="ConfigTextAnalyticsSubscriptionKey" Label="Subscription Key" />
+                            <EntryCell x:Name="ConfigTextAnalyticsHost" Label="Host" />
+                            <EntryCell x:Name="ConfigTextAnalyticsRoute" Label="Route" />
+                        </TableSection>-->
+                    </TableRoot>
+                </TableView>
+            
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
