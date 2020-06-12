@@ -23,8 +23,6 @@ This is an Azure Speech Translation sample application for iOS. It allows you to
 
 ## Contents
 
-Outline the file contents of the repository. It helps users navigate the codebase, build configuration and any related assets.
-
 | File/folder       | Description                                |
 |-------------------|--------------------------------------------|
 | `App1`            | Sample source code.                        |
